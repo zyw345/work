@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ms.Zhang's Classroom</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <style>
+        /* body{
+            background-color: pink;
+            opacity: 0.9;
+        } */
+         @keyframes jump {  
+            0% { transform: translateY(0); }  
+            50% { transform: translateY(-10px); }  
+            100% { transform: translateY(0); }  
+        }  
+        .jump-text {  
+            animation-name: jump;  
+            animation-duration: 1s;  
+            animation-iteration-count: infinite;  
+            font-size: 40px;  
+        } 
+        ul {
+            list-style: none;
+        }
+
+        a {
+            color: rgb(68, 34, 40);
+            line-height: 160px;
+            width: 100px;
+            height: 166px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .main {
+            width: 1200px;
+            height: 800px;
+            margin: auto;
+        }
+
+        .logo {
+            width: 1280px;
+            text-align: center;
+            color: rgb(230, 155, 168);
+            height: 100px;
+            padding-top: 20px;
+            border-bottom: 8px solid pink;
+        }
+
+        .left {
+            width: 550px;
+            float: left;
+            margin-left: 50px;
+        }
+
+        .info {
+            width: 550px;
+            height: 280px;
+            border-bottom: 6px solid pink;
+            display: block;
+        }
+
+        .pic {
+            float: left;
+        }
+
+        .content {
+            padding: 10px;
+            width: 310px;
+            height: 160px;
+            float: left;
+
+
+        }
+
+        .textin {
+            width: 310;
+            height: 150px;
+            overflow-y: scroll;
+            border: 1px dotted pink;
+            /* 可选，添加边框以便可视化 */
+        }
+
+        .right {
+            width: 400px;
+            height: 680px;
+            float: left;
+        }
+
+        .nav li {
+            width: 600px;
+            height: 166px;
+            /* display: block; */
+            display: flex;
+            align-items: center;
+            border-radius: 10%;
+            font-size: 20px;
+            border-bottom: 6px solid pink;
+        }
+
+        li:hover {
+            background-color: pink;
+            opacity: 0.5;
+
+        }
+
+        .pict {
+            display: inline-block;
+        }
+
+        .litext {
+            font-size: 16px;
+            width: 300px;
+            height: 166px;
+            overflow-y: scroll;
+        }
+
+        .back {
+            position: fixed;
+            width: 200px;
+            height: 200px;
+            background: url(./img/捧花.png) no-repeat;
+            background-size: cover;
+            right: 30px;
+            bottom: 10px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="logo">
+            <p class="jump-text">Ms.Zhang's Classroom</p>
+        </div>
+        <div class="left">
+            <div class="info">
+                <div class="pic"><img src="img/指着.png" alt=""></div>
+                <div class="content">
+                    <text name="" id="" cols="30" rows="10">
+                        <h3>Wix</h3>
+                        <p>网址：www.wix.com</p>
+                        <div class="textin">
+                            通过可视化的编辑工具和一系列功能强大的应用程序，Wix为用户提供了一种简单而灵活的方式来构建各类网站，无论是个人博客、商务网站还是在线商店。
+                            1.注册和创建账户
+                            2.选择合适的模板
+                            3.自定义网站设计
+                            4.操作 Wix 编辑器
+                            5.优化网站内容
+                            6.优化 SEO
+                            7.预览和发布
+                            8.网站维护和更新</div>
+                    </text>
+                </div>
+            </div>
+            <div class="info">
+                <div class="pic"><img src="img/指上.png" alt=""></div>
+                <div class="content">
+                    <text name="" id="" cols="30" rows="10">
+                        <h3>Weebly</h3>
+                        <p>网址：www.weebly.com</p>
+                        <div class="textin">
+                            Weebly是一款强大的网站建设平台，它可以帮助用户快速、简单地创建和定制自己的网站。具备直观的拖放编辑功能，Weebly不需要任何编程知识，即可创建令人印象深刻的网站。无论你是个人博客、企业网站还是在线商店，Weebly都提供了丰富的模板和插件来满足你的需求。
+                            它的功能有：
+                            1.拖放编辑
+                            2.自定义域名
+                            3.响应式设计
+                            4.SEO 优化
+                            5.网站统计
+                            创建Weebly 网站的步骤
+                            1.注册[Weebly 账号
+                            2.选择模板
+                            3.添加内容
+                            4.自定义样式
+                            5.发布网站
+                        </div>
+                    </text>
+                </div>
+            </div>
+            <div class="info">
+                <div class="pic"><img src="img/俏皮.png" alt=""></div>
+                <div class="content">
+                    <text name="" id="" cols="30" rows="10">
+                        <h3>竹子建站</h3>
+                        <p>网址：www.zhuzi.me</p>
+                        <div class="textin">
+                            竹子建站一款“SaaS”模式的在线响应式云建站系统，通过竹子建站的可视化在线网站编辑器30分钟就能创建一个漂亮的响应式网站，一次编辑同时拥有手机、PAD、PC、微信网站
+                            1.注册竹子建站的账号  
+                            2.登录你刚刚注册的账号或者使用第三方账号登录，然后点击【创建网站】或者【新建网站】。
+                            3.然后进入一个模板库，选择适合你的模板，点击【立即使用】 输入站点名称，设置新站点域名，选择站点用途（如下图），然后点击【新建站点】，进入站点编辑。     
+                            4.然后进入到竹子的在线可视化编辑系统，竹子建站的在线网页编辑有两种模式，普通模式和设计模式。在设计模式下，用户可以对网站进行高级自定义，制作出个性化的网站风格。 点击“进入设计模式”，便可进入到页面管理，在编辑器中对网站栏目进行设计和修改，同时通过插入、拖拽、拖动等操作，实现间距调整、图片大小、文字颜色大小等设置。
+                             
+                            5.将上面的一系列操作完成，点击“发布网站”
+                        </div>
+                    </text>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <ul class="nav">
+                <li>
+                    <div class="pict">
+                        <img src="img/爱心.png" alt="" width="" height="165px">
+                    </div>
+                    <a href="https://www.storyjumper.com/book/read/166468711/King-Tiger-Healing-fairy-tale?appId=1000"
+                        target="blank">电子故事书
+                    </a>
+                    <div class="litext">
+                        电子故事书<br>
+                        1.教学目标：培养语感和道德知识，对英语产生兴趣。<br>
+                        2.教学对象：小学生。<br>
+                        3.教学内容：书中故事关于老虎吃药，独立自主的意识，以童话故事的形式启发学生，培养独立意识。并且在朗读过程中培养语感和学习英语的兴趣。<br>
+                        4.修改意见：可以进行内容丰富和拓展。进行开放式结局引发儿童思考。增加互动的内容。<br>
+                    </div>
+                </li>
+                <li>
+                    <div class="pict">
+                        <img src="img/气球.png" alt="" width="" height="165px">
+                    </div>
+                    <a href="video/微课.mp4" target="blank">微课</a>
+                    <div class="litext">
+                        微课<br>
+                        1.教学目标：学会指定语法知识和拓展词汇以及英语兴趣。<br>
+                        2.教学对象：小学生。<br>
+                        3.教学内容：主要学习“there<br>
+                        be”语法和句型，通过ppp模式进行教学，先展示学习内容，学生进行练习，最后进行造句和创造以及思考反思，充分发挥主观能动性和想象力，达到对知识点的熟练掌握和学习英语的信心和热情。<br>
+                    </div>
+                </li>
+                <li>
+                    <div class="pict">
+                        <img src="img/彩虹.png" alt="" width="" height="165px">
+                    </div>
+                    <a href="video/视频作品.mp4" target="blank">视频作品</a>
+                    <div class="litext">
+                        视频作品<br>
+                        1.教学目标：学会指定单词的含义和用法以及自学能力的培养。<br>
+                        2.教学对象：小学生。<br>
+                        3.教学内容：学习单词“abandon”的含义，各种形式包括过去式现在分词过去分词等，通过造句理解单词不同含义和用法，以及不同语境和语气的情况下的不同用法。联系实际细致说明单词的用法。通过动画以及解说的形式吸引学生的注意和学习动机，并在这种方法下培养学生的自学能力。<br>
+                    </div>
+                </li>
+                <li>
+                    <div class="pict">
+                        <img src="img/开门.png" alt="" width="" height="165px">
+                    </div>
+                    <a href="reflect .html" target="blank">反思</a>
+                </li>
+            </ul>
+        </div>
+        <div class="back" title="点击返回顶部"></div>
+    </div>
+
+    <script>
+        /*------------返回顶部------------*/
+        var boxTop = $(".main").offset().top;
+        $(window).scroll(function () {
+            if ($(document).scrollTop() >= boxTop) {
+                $(".back").fadeIn();
+            } else {
+                $(".back").fadeOut();
+            }
+        });
+        $(".back").click(function () {
+            $("body, html").stop().animate({
+                scrollTop: 0
+            });
+        });
+    </script>
+    <!-- 樱花飘落 -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/static/js/sakura-less.js"></script>
+    <!-- 点击爆炸 -->
+    <script src="http://zhouql.vip/cdn/blast.js"></script>
+</body>
+
+</html>
